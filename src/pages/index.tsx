@@ -1,17 +1,13 @@
 import { NextSeo } from 'next-seo';
-import Page from '@/components/Page';
-import Header from '@/components/Header';
-import VideoSection from '@/components/VideoSection';
-import ListSection from '@/components/ListSection';
-import FeatureSection from '@/components/FeatureSection';
-import CasesSection from '@/components/CasesSection';
-import SocialProof from '@/components/SocialProof';
-import PricingTable from '@/components/PricingTable';
-import Footer from '@/components/Footer';
-import Contact from '@/components/Contact';
-import Hero from '@/components/Hero';
-import Projects from '@/components/Projects';
-import Stack from '@/components/Stack';
+import Page from '@/components/page';
+import Header from '@/components/header';
+import VideoSection from '@/components/video-section';
+import ListSection from '@/components/list-section';
+import FeatureSection from '@/components/feature-section';
+import CasesSection from '@/components/cases-section';
+import SocialProof from '@/components/social-proof';
+import PricingTable from '@/components/pricing-table';
+import Footer from '@/components/footer';
 import { meta } from '@/data/config';
 
 export default function Index() {
@@ -23,16 +19,12 @@ export default function Index() {
       />
       <Header />
       <main>
-        <Hero />
         <VideoSection />
         <ListSection />
         <FeatureSection />
         <CasesSection />
         <SocialProof />
         <PricingTable />
-        <Projects />
-        <Stack />
-        <Contact />
       </main>
       <Footer />
     </Page>

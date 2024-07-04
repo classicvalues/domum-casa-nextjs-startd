@@ -1,6 +1,9 @@
+// src/components/page/index.tsx
+
 import Head from 'next/head';
-import Navigation from '@/components/navigation';
+import Navigation from '@/components/Navigation'; // Updated to Navigation (assuming correct path)
 import { tw } from 'twind';
+import Footer from '@/components/Footer'; // Added Footer component for completeness
 
 interface IProps {
   children: React.ReactNode;
@@ -9,11 +12,14 @@ interface IProps {
 const Page = ({ children }: IProps) => (
   <div>
     <Head>
-      <link rel="icon" href="/logo.svg" />
+      <title>Domum Casa - Luxury Rental Management</title>
+      <meta name="description" content="Domum Casa offers luxury rental management services for short and long-term rentals. Explore our upscale property management solutions today." />
+      <link rel="icon" href="/favicon.ico" />
     </Head>
     <div className={tw(`min-h-screen flex flex-col`)}>
       <Navigation />
-      {children}
+      <main className={tw(`flex-grow`)}>{children}</main>
+      <Footer /> {/* Include Footer component at the bottom */}
     </div>
   </div>
 );
