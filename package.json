@@ -1,19 +1,21 @@
 {
-  "name": "startd-theme",
-  "description": "A TypeScript/Next.js theme that includes everything you need to build amazing landing page!",
+  "name": "domum-casa",
+  "description": "A luxury rental management platform for short and long-term rentals.",
   "version": "1.0.0",
   "private": true,
-  "author": "Jaakko Kytölä <kytola.jaakko@gmail.com> (jaakkokytola.com)",
+  "author": "Santiago de Jesus Villalobos-Gonzalez <domum.casa@usa.com>",
   "license": "MIT",
   "keywords": [
+    "luxury rental",
+    "property management",
+    "short-term rentals",
+    "long-term rentals",
     "nextjs",
-    "starter",
     "typescript",
-    "tailwind",
-    "theme"
+    "tailwind"
   ],
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
@@ -30,12 +32,13 @@
   "dependencies": {
     "@fontsource/inter": "4.2.1",
     "@svgr/webpack": "5.5.0",
-    "next": "10.0.7",
+    "next": "12.0.7",
     "next-seo": "4.20.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-particles-js": "3.4.1",
-    "twind": "0.15.4"
+    "twind": "0.15.4",
+    "next-themes": "^0.0.15"
   },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
@@ -47,8 +50,9 @@
     "@typescript-eslint/parser": "4.15.1",
     "commitizen": "4.2.3",
     "cz-conventional-changelog": "3.3.0",
-    "eslint": "7.20.0",
+    "eslint": "8.5.0",
     "eslint-config-airbnb": "18.2.1",
+    "eslint-config-next": "12.0.7",
     "eslint-config-prettier": "7.2.0",
     "eslint-import-resolver-typescript": "2.4.0",
     "eslint-plugin-import": "2.22.1",
@@ -58,8 +62,11 @@
     "eslint-plugin-react-hooks": "4.2.0",
     "husky": "5.0.9",
     "lint-staged": "10.5.4",
-    "prettier": "2.2.1",
-    "typescript": "4.1.5"
+    "prettier": "2.5.1",
+    "typescript": "4.1.5",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.7"
   },
   "config": {
     "commitizen": {

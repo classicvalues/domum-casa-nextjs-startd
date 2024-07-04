@@ -27,7 +27,7 @@ class MyDocument extends Document {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         ...initialProps.styles,
-        React.createElement(`style`, styleProps),
+        React.createElement('style', styleProps),
       ],
     };
   }
@@ -37,6 +37,24 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <script async src="https://scripts.simpleanalyticscdn.com/latest.js" />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/static/favicon/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/static/favicon/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/static/favicon/favicon-16x16.png"
+          />
+          <link rel="manifest" href="/static/favicon/site.webmanifest" />
         </Head>
         <body>
           <Main />
