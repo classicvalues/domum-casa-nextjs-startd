@@ -1,24 +1,20 @@
-import { tw } from 'twind';
+// src/components/socialproof/SocialProof.tsx
+
 import { useState } from 'react';
+import { tw } from 'twind';
 
 const socialProofs = [
   {
     name: `John Doe`,
     company: `Alphabet Inc.`,
     image: `/images/social-1.webp`,
-    text: `Commodo Lorem consequat ea consectetur pariatur proident excepteur.
-    Pariatur eiusmod minim minim ipsum tempor aute excepteur minim eu nisi laboris.
-    Duis sunt labore eu eu cupidatat labore commodo id aliquip.`,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
   },
   {
     name: `Jack Doe`,
     company: `Amazon.com, Inc.`,
     image: `/images/social-2.webp`,
-    text: `Anim labore ut amet cupidatat pariatur pariatur labore ad est.
-    Fugiat eiusmod dolore aliquip aute duis esse excepteur amet.
-    Sit cupidatat ipsum culpa nisi esse ipsum culpa in consectetur.
-    Enim incididunt do sunt ex do. Proident duis nulla minim sunt irure est
-    magna nostrud Lorem consectetur irure.`,
+    text: `Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`,
   },
 ];
 
@@ -38,57 +34,66 @@ const SocialProof = () => {
   };
 
   return (
-    <div className={tw(`container mx-auto my-8`)}>
-      <div className={tw(`max-w-7xl mx-auto`)}>
+    <div className={tw`container mx-auto my-8`}>
+      <div className={tw`max-w-3xl mx-auto`}>
         <section>
-          <figure>
-            <div className={tw(`relative bg-white`)}>
-              <div className={tw(`pt-20 px-6 md:px-0`)}>
-                <p className={tw(`text-gray-600 text-base pb-6`)}>{socialProofs[currentIndex].text}</p>
-                <div className={tw(`flex items-center justify-between`)}>
-                  <div className={tw(`flex items-center pb-12`)}>
-                    <div className={tw(`h-12 w-12`)}>
-                    </div>
-                    <p className={tw(`text-gray-600 font-bold ml-3`)}>
-                      {socialProofs[currentIndex].name} <br />
-                      <span className={tw(`text-gray-600 text-base font-light`)}>
-                        {socialProofs[currentIndex].company}
-                      </span>
-                    </p>
-                  </div>
-                  <div className={tw(`cursor-pointer flex pb-12`)}>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={44}
-                      height={44}
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="#CBD5E0"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      onClick={previous}
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" />
-                      <polyline points="15 6 9 12 15 18" />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={44}
-                      height={44}
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="#CBD5E0"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      onClick={next}
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" />
-                      <polyline points="9 6 15 12 9 18" />
-                    </svg>
-                  </div>
+          <figure className={tw`relative bg-white rounded-lg shadow-lg p-8`}>
+            <p className={tw`text-gray-600 text-lg pb-6`}>{socialProofs[currentIndex].text}</p>
+            <div className={tw`flex items-center justify-between`}>
+              <div className={tw`flex items-center`}>
+                <div className={tw`h-12 w-12 rounded-full overflow-hidden`}>
+                  <img
+                    className={tw`h-full w-full object-cover`}
+                    src={socialProofs[currentIndex].image}
+                    alt={`${socialProofs[currentIndex].name} - ${socialProofs[currentIndex].company}`}
+                  />
                 </div>
+                <div className={tw`ml-4`}>
+                  <p className={tw`text-gray-800 font-bold`}>{socialProofs[currentIndex].name}</p>
+                  <p className={tw`text-gray-600 text-sm`}>{socialProofs[currentIndex].company}</p>
+                </div>
+              </div>
+              <div className={tw`flex items-center space-x-4`}>
+                <button
+                  className={tw`rounded-full p-2 bg-gray-200 hover:bg-gray-300 transition duration-300`}
+                  onClick={previous}
+                  aria-label="Previous"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={tw`h-6 w-6 text-gray-600`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 19l-7-7 7-7"
+                    />
+                  </svg>
+                </button>
+                <button
+                  className={tw`rounded-full p-2 bg-gray-200 hover:bg-gray-300 transition duration-300`}
+                  onClick={next}
+                  aria-label="Next"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={tw`h-6 w-6 text-gray-600`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
               </div>
             </div>
           </figure>

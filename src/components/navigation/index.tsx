@@ -14,16 +14,16 @@ type Link = {
 
 const links: Link[] = [
   {
-    label: `Features`,
-    href: `/features`,
+    label: `Properties`,
+    href: `/properties`,
   },
   {
     label: `Testimonials`,
     href: `/testimonials`,
   },
   {
-    label: `Pricing`,
-    href: `/pricing`,
+    label: `Rates`,
+    href: `/rates`,
   },
   {
     label: `Blog`,
@@ -37,8 +37,8 @@ const secondaryLinks: Link[] = [
     href: `/contact`,
   },
   {
-    label: `Log In`,
-    href: `/login`,
+    label: `Sign In`,
+    href: `/signin`,
   },
   {
     label: `Get Started`,
