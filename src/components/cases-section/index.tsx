@@ -1,7 +1,7 @@
 import { tw } from 'twind';
 import Particles from 'react-particles-js';
 import Image from 'next/image';
-import Arrow from '@/components/case-section/arrow.svg'; // Correct import path
+import { MdArrowForward } from "react-icons/md";
 
 const ParticleBg = () => (
   <Particles
@@ -103,7 +103,7 @@ const CasesSection = () => (
               )}
             >
               See all case studies
-              <Arrow className={tw('h-6 w-6 fill-current ml-2')} /> {/* Ensure the correct Arrow component is imported */}
+              <MdArrowForward className={tw('h-6 w-6 fill-current ml-2')} /> 
             </span>
           </div>
         </div>

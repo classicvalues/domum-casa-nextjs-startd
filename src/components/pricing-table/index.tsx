@@ -1,5 +1,5 @@
 import { tw } from 'twind';
-import Check from '@/constants/svg/check.svg';
+import { MdCheckCircleOutline } from "react-icons/md";
 import Button from '@/components/button';
 
 const features = [
@@ -40,7 +40,7 @@ const PricingTable = () => (
               {features.map((feature) => (
                 <li className={tw(`flex items-center lg:col-span-1`)} key={feature}>
                   <div className={tw(`flex-shrink-0`)}>
-                    <Check className={tw(`h-8 w-8 mr-3 mb-1`)} />
+                    <MdCheckCircleOutline className={tw(`h-8 w-8 mr-3 mb-1`)} />
                   </div>
                   <p className={tw(`text-gray-600`)}>{feature}</p>
                 </li>
