@@ -2,7 +2,7 @@ import { tw, css } from 'twind/css';
 import Button from '@/components/button';
 
 const headerStyle = css`
-  background-color: #ffffff;
+  background-color: #000000;
   min-height: calc(100vh - 6rem);
 `;
 
