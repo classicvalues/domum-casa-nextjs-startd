@@ -1,6 +1,6 @@
 import { tw } from 'twind';
 import Particles from 'react-particles-js';
-import Arrow from '@/constants/svg/arrow.svg';
+import Arrow from 'src/constants/svg/arrow.svg';
 
 const ParticleBg = () => (
   <Particles

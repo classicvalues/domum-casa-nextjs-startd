@@ -1,6 +1,6 @@
 import { tw } from 'twind';
 import { useState } from 'react';
-import Quote from '@/constants/svg/quote.svg';
+import Quote from 'src/constants/svg/quote.svg';
 
 const socialProofs = [
   {

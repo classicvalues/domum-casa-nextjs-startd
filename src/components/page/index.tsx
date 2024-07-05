@@ -1,9 +1,9 @@
 // src/components/page/index.tsx
 
 import Head from 'next/head';
-import Navigation from '@/components/Navigation'; // Updated to Navigation (assuming correct path)
+import Navigation from 'src/components/navigation'; // Updated to Navigation (assuming correct path)
 import { tw } from 'twind';
-import Footer from '@/components/Footer'; // Added Footer component for completeness
+import Footer from 'src/components/footer'; // Added Footer component for completeness
 
 interface IProps {
   children: React.ReactNode;

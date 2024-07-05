@@ -1,6 +1,6 @@
 import { tw } from 'twind';
 import { useState } from 'react';
-import Button from '@/components/button';
+import Button from 'src/components/button';
 
 interface IMenuButton {
   toggleMenu: React.MouseEventHandler<HTMLButtonElement>;

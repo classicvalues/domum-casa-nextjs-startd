@@ -1,6 +1,6 @@
 import { tw } from 'twind';
-import Check from '@/constants/svg/check.svg';
-import Button from '@/components/button';
+import Check from 'src/constants/svg/check.svg';
+import Button from 'src/components/button';
 
 const features = [
   `Laboris nulla`,

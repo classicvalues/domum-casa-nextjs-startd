@@ -1,6 +1,6 @@
 import { tw } from 'twind';
-import Preferences from '@/constants/svg/preferences.svg';
-import Play from '@/constants/svg/play.svg';
+import Preferences from 'src/constants/svg/preferences.svg';
+import Play from 'src/constants/svg/play.svg';
 
 const PlayButton = () => (
   <button
