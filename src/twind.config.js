@@ -1,4 +1,4 @@
-export default {
+const twindConfig = {
   theme: {
     extend: {
       fontFamily: {
@@ -9,3 +9,5 @@ export default {
     },
   },
 };
+
+export default twindConfig;
