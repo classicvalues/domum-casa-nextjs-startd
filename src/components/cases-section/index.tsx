@@ -65,7 +65,7 @@ const ParticleBg = () => (
         number: {
           density: {
             enable: true,
-            value_area: 800, // Use value_area instead of area
+            value: 800, // Use value instead of value_area
           },
           value: 80,
         },
@@ -144,7 +144,7 @@ const CasesSection = () => (
               )}
             >
               See all case studies
-              <MdArrowForward className={tw('h-6 w-6 fill-current ml-2')} /> 
+              <MdArrowForward className={tw('h-6 w-6 fill-current ml-2')} />
             </span>
           </div>
         </div>
