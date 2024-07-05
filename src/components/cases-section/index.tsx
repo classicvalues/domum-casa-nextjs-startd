@@ -65,7 +65,7 @@ const ParticleBg = () => (
         number: {
           density: {
             enable: true,
-            area: 800, // Corrected property name from value_area to area
+            value_area: 800, // Use value_area instead of area
           },
           value: 80,
         },
