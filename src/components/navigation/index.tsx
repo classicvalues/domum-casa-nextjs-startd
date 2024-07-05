@@ -1,7 +1,6 @@
-import { tw } from 'twind';
 import { useState } from 'react';
+import { tw } from 'twind';
 import Button from '@/components/button';
-import Image from 'next/image'; // Import Image from next/image
 
 interface IMenuButton {
   toggleMenu: React.MouseEventHandler<HTMLButtonElement>;
@@ -16,34 +15,34 @@ type Link = {
 const links: Link[] = [
   {
     label: `Features`,
-    href: `/`,
+    href: `/features`,
   },
   {
     label: `Testimonials`,
-    href: `/`,
+    href: `/testimonials`,
   },
   {
     label: `Pricing`,
-    href: `/`,
+    href: `/pricing`,
   },
   {
     label: `Blog`,
-    href: `/`,
+    href: `/blog`,
   },
 ];
 
 const secondaryLinks: Link[] = [
   {
-    label: `Contact sales`,
-    href: `/`,
+    label: `Contact Us`,
+    href: `/contact`,
   },
   {
-    label: `Log in`,
-    href: `/`,
+    label: `Log In`,
+    href: `/login`,
   },
   {
     label: `Get Started`,
-    href: `/`,
+    href: `/get-started`,
   },
 ];
 
@@ -86,29 +85,37 @@ const MenuButton = ({ toggleMenu, showMenu }: IMenuButton) => (
   </button>
 );
 
-const MobileMenu = () => (
-  <div className={tw(`md:hidden`)}>
-    <div className={tw(`px-2 pt-2 pb-3 space-y-1 sm:px-3`)}>
-      {links.map((link) => (
-        <a href={link.href} className={tw(`text-gray-500 block px-3 py-2 text-base font-medium`)} key={link.label}>
-          {link.label}
-        </a>
-      ))}
-    </div>
-    <div className={tw(`pt-4 pb-3 border-t border-gray-400`)}>
-      <div className={tw(`px-2 space-y-1`)}>
-        {secondaryLinks.map((link) => (
-          <a
-            key={`mobile-${link.label}`}
-            href={link.href}
-            className={tw(`block px-3 py-2 text-base font-medium text-gray-500`)}
-          >
+const MobileMenu = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu: React.MouseEventHandler<HTMLButtonElement> = () => {
+    setShowMenu(!showMenu);
+  };
+
+  return (
+    <div className={tw`md:hidden`}>
+      <div className={tw`px-2 pt-2 pb-3 space-y-1 sm:px-3`}>
+        {links.map((link) => (
+          <a href={link.href} className={tw`text-gray-500 block px-3 py-2 text-base font-medium`} key={link.label}>
             {link.label}
           </a>
         ))}
       </div>
+      <div className={tw`pt-4 pb-3 border-t border-gray-400`}>
+        <div className={tw`px-2 space-y-1`}>
+          {secondaryLinks.map((link) => (
+            <a
+              key={`mobile-${link.label}`}
+              href={link.href}
+              className={tw`block px-3 py-2 text-base font-medium text-gray-500`}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
     </div>
-  </div> // Added closing </div> for MobileMenu
-);
+  );
+};
 
 export default MobileMenu;
