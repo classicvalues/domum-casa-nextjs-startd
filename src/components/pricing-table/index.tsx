@@ -1,18 +1,18 @@
-// src/components/pricing/PricingTable.tsx
+// src/components/pricing-table/PricingTable.tsx
 
 import { tw } from 'twind';
 import { MdCheckCircleOutline } from 'react-icons/md';
 import Button from '@/components/button';
 
 const features = [
-  `Luxury amenities included`,
-  `Personalized concierge service`,
-  `24/7 property management`,
-  `Flexible short and long-term leasing options`,
-  `High-end interior design`,
-  `Exclusive access to premium locations`,
-  `Professional cleaning services`,
-  `Dedicated customer support`,
+  'Luxury amenities included',
+  'Personalized concierge service',
+  '24/7 property management',
+  'Flexible short and long-term leasing options',
+  'High-end interior design',
+  'Exclusive access to premium locations',
+  'Professional cleaning services',
+  'Dedicated customer support',
 ];
 
 const PricingTable = () => (
@@ -22,13 +22,13 @@ const PricingTable = () => (
         <div className={tw`py-8 px-6 md:px-0 lg:flex-shrink-1`}>
           <h2 className={tw`text-4xl lg:text-7xl font-bold text-gray-800 mb-12`}>Discover Our Premium Offerings</h2>
           <p className={tw`mt-6 text-base leading-6 text-gray-500`}>
-            Elevate your lifestyle with Domum Casa's luxury rental management services. Enjoy the finest properties with
+            Elevate your lifestyle with Domum Casa&apos;s luxury rental management services. Enjoy the finest properties with
             unparalleled comfort and convenience.
           </p>
           <div className={tw`mt-8`}>
             <div className={tw`flex items-center`}>
               <h3 className={tw`flex-shrink-0 pr-4 text-sm leading-5 tracking-wider font-semibold uppercase text-indigo-600`}>
-                What's Included
+                What&apos;s Included
               </h3>
               <div className={tw`flex-1 border-t-2 border-gray-200`} />
             </div>

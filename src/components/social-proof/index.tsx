@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { tw } from 'twind';
+import Image from 'next/image';
 
 const socialProofs = [
   {
@@ -41,11 +42,12 @@ const SocialProof = () => {
             <p className={tw`text-gray-600 text-lg pb-6`}>{socialProofs[currentIndex].text}</p>
             <div className={tw`flex items-center justify-between`}>
               <div className={tw`flex items-center`}>
-                <div className={tw`h-12 w-12 rounded-full overflow-hidden`}>
-                  <img
-                    className={tw`h-full w-full object-cover`}
+                <div className={tw`h-12 w-12 rounded-full overflow-hidden relative`}>
+                  <Image
                     src={socialProofs[currentIndex].image}
                     alt={`${socialProofs[currentIndex].name} - ${socialProofs[currentIndex].company}`}
+                    layout="fill"
+                    objectFit="cover"
                   />
                 </div>
                 <div className={tw`ml-4`}>
