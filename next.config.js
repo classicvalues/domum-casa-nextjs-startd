@@ -1,11 +1,13 @@
 module.exports = {
     webpack: (config, { isServer }) => {
-      // Exclude fs and module from being bundled in client-side builds
+      // Exclude perf_hooks, fs, module, and v8 from client-side builds
       if (!isServer) {
         config.externals = {
-          fs: 'empty',
-          module: 'empty',
-          v8: 'empty',
+          ...config.externals,
+          'perf_hooks': 'empty',
+          'fs': 'empty',
+          'module': 'empty',
+          'v8': 'empty',
         };
       }
   
