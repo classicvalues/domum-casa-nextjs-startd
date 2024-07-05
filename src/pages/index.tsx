@@ -18,12 +18,12 @@ export default function Index() {
       />
       <Header />
       <main>
-        <Video-Section />
-        <List-Section />
-        <Feature-Section />
-        <Cases-Section />
-        <Social-Proof />
-        <Pricing-Table />
+        <VideoSection />
+        <ListSection />
+        <FeatureSection />
+        <CasesSection />
+        <SocialProof />
+        <PricingTable />
       </main>
       <Footer />
     </Page>
