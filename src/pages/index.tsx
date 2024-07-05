@@ -8,7 +8,6 @@ import CasesSection from '@/components/cases-section';
 import SocialProof from '@/components/social-proof';
 import PricingTable from '@/components/pricing-table';
 import Footer from '@/components/footer';
-import { meta } from '@/data/config';
 
 export default function Index() {
   return (
