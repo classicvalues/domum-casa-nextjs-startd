@@ -1,4 +1,6 @@
 import { tw } from 'twind';
+import Image from 'next/image';
+import Link from 'next/link';
 import Button from '@/components/button';
 
 const productLinks = [`Features`, `Customers`, `Platform`, `Pricing`, `Enterprise`, `What's new?`];
@@ -19,7 +21,9 @@ const Footer = () => (
   <footer className={tw(`bg-white border-t border-gray-400 pt-14 pb-16`)}>
     <div className={tw(`max-w-7xl mx-auto text-gray-400 px-8 lg:px-0 flex flex-wrap`)}>
       <div className={tw(`mb-14 flex items-center w-full`)}>
-        <img className={tw(`h-12 w-12 mr-4`)} src="logo.svg" alt="logo" width={48} height={48} />
+        <div className={tw(`h-12 w-12 mr-4`)}>
+          <Image src="/logo.svg" alt="logo" width={48} height={48} />
+        </div>
         <p className={tw(`text-4xl text-indigo-500 font-bold`)}>STARTD</p>
       </div>
       <div className={tw(`w-full lg:w-1/2`)}>
@@ -30,7 +34,9 @@ const Footer = () => (
               <ul>
                 {productLinks.map((link) => (
                   <li className={tw(`text-gray-800 text-sm font-medium leading-6`)} key={link}>
-                    <a href="/">{link}</a>
+                    <Link href="/">
+                      <a>{link}</a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -42,7 +48,9 @@ const Footer = () => (
               <ul>
                 {resourceLinks.map((link) => (
                   <li className={tw(`text-gray-800 text-sm font-medium leading-6`)} key={link}>
-                    <a href="/">{link}</a>
+                    <Link href="/">
+                      <a>{link}</a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -54,7 +62,9 @@ const Footer = () => (
               <ul>
                 {aboutLinks.map((link) => (
                   <li className={tw(`text-gray-800 text-sm font-medium leading-6`)} key={link}>
-                    <a href="/">{link}</a>
+                    <Link href="/">
+                      <a>{link}</a>
+                    </Link>
                   </li>
                 ))}
               </ul>
