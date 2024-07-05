@@ -1,13 +1,13 @@
 import { NextSeo } from 'next-seo';
-import Page from '@/components/page';
-import Header from '@/components/header';
-import VideoSection from '@/components/video-section';
-import ListSection from '@/components/list-section';
-import FeatureSection from '@/components/feature-section';
-import CasesSection from '@/components/cases-section';
-import SocialProof from '@/components/social-proof';
-import PricingTable from '@/components/pricing-table';
-import Footer from '@/components/footer';
+import Page from 'src/components/page';
+import Header from 'src/components/header';
+import VideoSection from 'src/components/video-section';
+import ListSection from 'src/components/list-section';
+import FeatureSection from 'src/components/feature-section';
+import CasesSection from 'src/components/cases-section';
+import SocialProof from 'src/components/social-proof';
+import PricingTable from 'src/components/pricing-table';
+import Footer from 'src/components/footer';
 import { meta } from '@/data/config';
 
 export default function Index() {
