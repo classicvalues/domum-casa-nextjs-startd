@@ -74,7 +74,6 @@ const ParticleBg = () => (
           type: 'circle',
         },
         size: {
-          random: true,
           value: 5,
         },
       },
