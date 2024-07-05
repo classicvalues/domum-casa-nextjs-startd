@@ -1,7 +1,5 @@
 import { tw } from 'twind';
 import { useState } from 'react';
-import Quote from 'src/constants/svg/quote.svg';
-import Image from 'next/image'; // Import Image from next/image
 
 const socialProofs = [
   {
@@ -45,19 +43,11 @@ const SocialProof = () => {
         <section>
           <figure>
             <div className={tw(`relative bg-white`)}>
-              <Quote className={tw(`w-16 md:w-12 left-0 md:-left-2 absolute top-0 pl-4 md:pl-0 text-gray-300`)} />
               <div className={tw(`pt-20 px-6 md:px-0`)}>
                 <p className={tw(`text-gray-600 text-base pb-6`)}>{socialProofs[currentIndex].text}</p>
                 <div className={tw(`flex items-center justify-between`)}>
                   <div className={tw(`flex items-center pb-12`)}>
                     <div className={tw(`h-12 w-12`)}>
-                      <Image
-                        src={socialProofs[currentIndex].image}
-                        alt={socialProofs[currentIndex].name}
-                        className={tw(`h-full w-full object-cover overflow-hidden rounded-full`)}
-                        height={48}
-                        width={48}
-                      />
                     </div>
                     <p className={tw(`text-gray-600 font-bold ml-3`)}>
                       {socialProofs[currentIndex].name} <br />

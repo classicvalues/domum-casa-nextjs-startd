@@ -22,7 +22,6 @@ const Footer = () => (
     <div className={tw(`max-w-7xl mx-auto text-gray-400 px-8 lg:px-0 flex flex-wrap`)}>
       <div className={tw(`mb-14 flex items-center w-full`)}>
         <div className={tw(`h-12 w-12 mr-4`)}>
-          <Image src="/logo.svg" alt="logo" width={48} height={48} />
         </div>
         <p className={tw(`text-4xl text-indigo-500 font-bold`)}>STARTD</p>
       </div>
