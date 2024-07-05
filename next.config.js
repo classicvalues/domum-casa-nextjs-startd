@@ -1,11 +1,13 @@
-module.exports = {
+const withSvgr = require('@svgr/webpack');
+
+module.exports = withSvgr({
   reactStrictMode: true,
-  webpack(config) {
+  webpack(config, options) {
     config.module.rules.push({
       test: /\.svg$/,
-      use: [`@svgr/webpack`],
+      use: ['@svgr/webpack'],
     });
 
     return config;
   },
-};
+});
