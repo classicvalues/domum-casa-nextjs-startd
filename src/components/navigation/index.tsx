@@ -105,4 +105,10 @@ const MobileMenu = () => (
           >
             {link.label}
           </a>
-  
+        ))}
+      </div>
+    </div>
+  </div> // Added closing </div> for MobileMenu
+);
+
+export default MobileMenu;
