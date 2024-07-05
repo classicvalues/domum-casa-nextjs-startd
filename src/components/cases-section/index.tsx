@@ -1,7 +1,7 @@
 import { tw } from 'twind';
 import Particles from 'react-particles-js';
 import Image from 'next/image';
-import Arrow from '@/components/Arrow'; // Adjust import path as per your project structure
+import Arrow from '@/components/case-section/arrow.svg'; // Adjust import path as per your project structure
 
 const ParticleBg = () => (
   <Particles
@@ -105,7 +105,7 @@ const CasesSection = () => (
               )}
             >
               See all case studies
-              <Arrow className={tw(`h-6 w-6 fill-current ml-2`)} />
+              <Arrow className={tw(`h-6 w-6 fill-current ml-2`)} /> {/* Ensure the correct Arrow component is imported */}
             </span>
           </div>
         </div>
