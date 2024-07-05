@@ -65,9 +65,9 @@ const ParticleBg = () => (
         number: {
           density: {
             enable: true,
-            value: 800, // Use value instead of value_area
+            value: '#000000', // Use value instead of value_area
           },
-          value: 80,
+          value: '#000000',
         },
         opacity: {
           value: 0.5,
