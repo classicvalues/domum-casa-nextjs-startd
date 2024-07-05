@@ -1,45 +1,82 @@
 import { tw } from 'twind';
 import { Particles } from '@tsparticles/react';
 import Image from 'next/image';
-import { MdArrowForward } from "react-icons/md";
+import { MdArrowForward } from 'react-icons/md';
 
 const ParticleBg = () => (
   <Particles
-    params={{
-      particles: {
-        number: {
-          value: 400,
-          density: {
-            enable: true,
-            value_area: 3000,
+    id="tsparticles"
+    options={{
+      background: {
+        color: {
+          value: '#000000',
+        },
+      },
+      fpsLimit: 60,
+      interactivity: {
+        detectsOn: 'canvas',
+        events: {
+          onClick: {
+            enable: false,
+            mode: 'push',
+          },
+          onHover: {
+            enable: false,
+            mode: 'repulse',
+          },
+          resize: true,
+        },
+        modes: {
+          push: {
+            particles_nb: 4,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
           },
         },
-        line_linked: {
-          enable: false,
+      },
+      particles: {
+        color: {
+          value: '#ffffff',
+        },
+        links: {
+          color: '#ffffff',
+          distance: 150,
+          enable: true,
+          opacity: 0.4,
+          width: 1,
+        },
+        collisions: {
+          enable: true,
         },
         move: {
-          direction: 'right',
-          speed: 0.3,
+          direction: 'none',
+          enable: true,
+          outMode: 'bounce',
+          random: false,
+          speed: 6,
+          straight: false,
         },
-        size: {
-          value: 1,
+        number: {
+          density: {
+            enable: true,
+            value_area: 800,
+          },
+          value: 80,
         },
         opacity: {
-          anim: {
-            enable: true,
-            speed: 0.5,
-            opacity_min: 0.1,
-          },
+          value: 0.5,
+        },
+        shape: {
+          type: 'circle',
+        },
+        size: {
+          random: true,
+          value: 5,
         },
       },
-      interactivity: {
-        events: {
-          onclick: {
-            enable: false,
-          },
-        },
-      },
-      retina_detect: true,
+      detectRetina: true,
     }}
   />
 );
