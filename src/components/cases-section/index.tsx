@@ -64,8 +64,7 @@ const ParticleBg = () => (
         },
         number: {
           density: {
-            enable: true,
-            value: '#000000', // Use value instead of value_area
+            enable: true // Use value instead of value_area
           },
           value: '#000000',
         },
