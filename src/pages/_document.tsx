@@ -24,9 +24,7 @@ class MyDocument extends Document {
     return {
       ...initialProps,
       styles: [
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        ...initialProps.styles,
+        ...React.Children.toArray(initialProps.styles),
         React.createElement('style', styleProps),
       ],
     };
