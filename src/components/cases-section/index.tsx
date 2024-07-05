@@ -1,6 +1,7 @@
 import { tw } from 'twind';
 import Particles from 'react-particles-js';
-import Arrow from 'src/constants/svg/arrow.svg';
+import Image from 'next/image';
+import Arrow from '@/components/Arrow'; // Adjust import path as per your project structure
 
 const ParticleBg = () => (
   <Particles
@@ -83,7 +84,7 @@ const CasesSection = () => (
                 )}
               >
                 <div className={tw(`h-64 z-20`)}>
-                  <img
+                  <Image
                     src={article.image}
                     alt={article.alt}
                     className={tw(`h-full w-full object-cover overflow-hidden rounded`)}

@@ -1,7 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-export default (req: NextApiRequest, res: NextApiResponse) => {
-  res.statusCode = 200;
-  res.json({ message: `Welcome to Domum Casa API` });
+const handler = (req: NextApiRequest, res: NextApiResponse) => {
+  res.status(200).json({ message: `Welcome to Domum Casa API` });
 };
+
+export default handler;
